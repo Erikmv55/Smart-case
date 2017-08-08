@@ -563,6 +563,7 @@ h6, .h6 {
   font-size: 1rem;
 }
 
+
 .lead {
   font-size: 1.25rem;
   font-weight: 300;
@@ -3922,13 +3923,13 @@ tbody.collapse.show {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 0.5rem 1rem;
+  
 }
 
 .navbar-brand {
   display: inline-block;
   padding-top: .25rem;
-  padding-bottom: .25rem;
+
   margin-right: 1rem;
   font-size: 1.25rem;
   line-height: inherit;
@@ -3962,18 +3963,18 @@ tbody.collapse.show {
 .navbar-text {
   display: inline-block;
   padding-top: .425rem;
-  padding-bottom: .425rem;
+  /*padding-bottom: .425rem;*/
 }
 
 .navbar-toggler {
   -webkit-align-self: flex-start;
       -ms-flex-item-align: start;
           align-self: flex-start;
-  padding: 0.25rem 0.75rem;
+  /*padding: 0.25rem 0.75rem;*/
   font-size: 1.25rem;
   line-height: 1;
   background: transparent;
-  border: 1px solid transparent;
+  /*border: 1px solid transparent;*/
   border-radius: 0.25rem;
 }
 
@@ -4345,7 +4346,7 @@ tbody.collapse.show {
 }
 
 .navbar-light .navbar-toggler {
-  border-color: rgba(0, 0, 0, 0.1);
+  /*border-color: rgba(0, 0, 0, 0.1);*/
 }
 
 .navbar-light .navbar-toggler-icon {
@@ -4387,7 +4388,7 @@ tbody.collapse.show {
 }
 
 .navbar-inverse .navbar-toggler {
-  border-color: rgba(255, 255, 255, 0.1);
+  /*border-color: rgba(255, 255, 255, 0.1);*/
 }
 
 .navbar-inverse .navbar-toggler-icon {
@@ -9317,4 +9318,272 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
     display: none !important;
   }
 }
+
+.row{
+    margin-left:0px;
+    margin-right:0px;
+}
+
+#wrapper {
+    padding-left: 70px;
+    transition: all .4s ease 0s;
+    height: 100%
+}
+
+#sidebar-wrapper {
+    margin-left: -150px;
+    left: 70px;
+    width: 150px;
+    background: #222;
+    position: fixed;
+    height: 100%;
+    z-index: 10000;
+    transition: all .4s ease 0s;
+}
+
+.sidebar-nav {
+    display: block;
+    float: left;
+    width: 150px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#page-content-wrapper {
+    padding-left: 0;
+    margin-left: 0;
+    width: 100%;
+    height: auto;
+}
+#wrapper.active {
+    padding-left: 150px;
+}
+#wrapper.active #sidebar-wrapper {
+    left: 150px;
+}
+
+#page-content-wrapper {
+  width: 100%;
+}
+
+#sidebar_menu li a, .sidebar-nav li a {
+    color: #999;
+    display: block;
+    float: left;
+    text-decoration: none;
+    width: 150px;
+    background: #252525;
+    border-top: 1px solid #373737;
+    border-bottom: 1px solid #1A1A1A;
+    -webkit-transition: background .5s;
+    -moz-transition: background .5s;
+    -o-transition: background .5s;
+    -ms-transition: background .5s;
+    transition: background .5s;
+}
+.sidebar_name {
+    padding-top: 25px;
+    color: #fff;
+    opacity: .7;
+}
+
+.sidebar-nav li {
+  line-height: 40px;
+  text-indent: 20px;
+}
+
+.sidebar-nav li a {
+  color: #999999;
+  display: block;
+  text-decoration: none;
+}
+
+.sidebar-nav li a:hover {
+  color: #fff;
+  background: rgba(255,255,255,0.2);
+  text-decoration: none;
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+  text-decoration: none;
+}
+
+.sidebar-nav > .sidebar-brand {
+  height: 65px;
+  line-height: 60px;
+  font-size: 18px;
+}
+
+.sidebar-nav > .sidebar-brand a {
+  color: #999999;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+  color: #fff;
+  background: none;
+}
+
+#main_icon
+{
+    float:right;
+   padding-right: 65px;
+   padding-top:20px;
+   left: 50px;
+}
+.sub_icon
+{
+    float:right;
+   padding-right: 65px;
+   padding-top:10px;
+}
+
+@media (max-width:767px) {
+    #wrapper {
+    padding-left: 70px;
+    transition: all .4s ease 0s;
+}
+#sidebar-wrapper {
+    left: 70px;
+}
+#wrapper.active {
+    padding-left: 150px;
+}
+#wrapper.active #sidebar-wrapper {
+    left: 150px;
+    width: 150px;
+    transition: all .4s ease 0s;
+}
+}
+
+/*!
+ * Start Bootstrap - Simple Sidebar (http://startbootstrap.com/)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+
+ body {
+    overflow-x: hidden;
+ }
+
+/* Toggle Styles */
+
+#wrapper {
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled {
+    padding-left: 250px;
+}
+
+#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    left: 250px;
+    width: 0;
+    height: 100%;
+    margin-left: -250px;
+    overflow-y: auto;
+    background: #000;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    width: 250px;
+}
+
+#page-content-wrapper {
+    width: 100%;
+    position: absolute;
+    padding: 15px;
+}
+
+#wrapper.toggled #page-content-wrapper {
+    position: absolute;
+    margin-right: -250px;
+}
+
+/* Sidebar Styles */
+
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sidebar-nav li {
+    text-indent: 20px;
+    line-height: 40px;
+}
+
+.sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: #999999;
+}
+
+.sidebar-nav li a:hover {
+    text-decoration: none;
+    color: #fff;
+    background: rgba(255,255,255,0.2);
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+    text-decoration: none;
+}
+
+.sidebar-nav > .sidebar-brand {
+    height: 65px;
+    font-size: 18px;
+    line-height: 60px;
+}
+
+.sidebar-nav > .sidebar-brand a {
+    color: #999999;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+    color: #fff;
+    background: none;
+}
+
+@media(min-width:768px) {
+    #wrapper {
+        padding-left: 0;
+    }
+
+    #wrapper.toggled {
+        padding-left: 250px;
+    }
+
+    #sidebar-wrapper {
+        width: 0;
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+        width: 250px;
+    }
+
+    #page-content-wrapper {
+        padding: 20px;
+        position: relative;
+    }
+
+    #wrapper.toggled #page-content-wrapper {
+        position: relative;
+        margin-right: 0;
+    }
+}
+
 /*# sourceMappingURL=bootstrap.css.map */
